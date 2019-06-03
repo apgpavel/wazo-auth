@@ -6,7 +6,7 @@ ADD ./contribs/docker/certs /usr/share/xivo-certs
 WORKDIR /usr/src/wazo-auth
 
 RUN apt-get update \
-    && apt-get -yq install libldap2-dev libsasl2-dev \
+    && apt-get -yq install libldap2-dev libsasl2-dev nginx \
     && pip install -r requirements.txt \
     && python setup.py install \
     && touch /var/log/wazo-auth.log \
